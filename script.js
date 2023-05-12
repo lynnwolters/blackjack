@@ -85,9 +85,7 @@ function checkResults() {
         if (dealerIsAlive === true && playerIsAlive === true) {
             message = "Want to draw another card?"
         }
-    } 
-    
-    if (playerSum > 21) {
+    } else if (playerSum > 21) {
         playerIsAlive = false
         dealerIsAlive = true
         if (playerIsAlive === false && dealerIsAlive === true) {
@@ -190,13 +188,13 @@ function dealerNewCard() {
 
 // whoWon()
 function whoWon() {
-    if (playerSum < dealerSum) {
+    if (playerSum > dealerSum) {
         playerIsAlive = true
         dealerIsAlive = false
         if (playerIsAlive === true && dealerIsAlive === false) {
             message = "You won! 🎉🎉🎉"
         }
-    } else if (playerSum > dealerSum) {
+    } else if (playerSum < dealerSum) {
         playerIsAlive = true
         dealerIsAlive = false
         if (playerIsAlive === true && dealerIsAlive === false) {
