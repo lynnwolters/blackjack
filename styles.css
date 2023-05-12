@@ -1,0 +1,107 @@
+body {
+    background-color: #704FCB;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    height: 4em;
+    position: fixed;
+}
+
+nav > button {
+    background-color: white;
+    color: black;
+    float: right;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+main section {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+main section div:nth-of-type(1), main section div:nth-of-type(2), main section div:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .6em;
+}
+
+main section > div:nth-of-type(1), main section > div:nth-of-type(3) {
+    flex-direction: column;
+}
+
+main section div:nth-of-type(2) {
+    text-align: center;
+}
+
+#message-el {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+#dealer-cards-el, #player-cards-el {
+    display: flex;
+}
+
+#dealer-cards-el img, #player-cards-el img {
+    width: 3em;
+    height: 4.4em;
+    margin: .4em;
+}
+
+button {
+    background-color: black;
+    width: 12em;
+    height: 3em;
+    border: none;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.1s ease-out;
+    margin: 1em;
+    border-radius: .4em;
+    font-weight: 600;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 4em;
+    padding: 1em;
+    display: flex;
+    align-items: flex-end;
+}
+
+footer a {
+    font-weight: 400;
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+}
+
+.card {
+    transition: opacity 0.5s ease-in-out;
+}
+
+
