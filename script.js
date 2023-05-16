@@ -175,6 +175,7 @@ function playerNewCard() {
     }
 }
 
+
 // dealerNewCard()
 function dealerNewCard() {
     if (dealerSum < 17) {
@@ -188,13 +189,13 @@ function dealerNewCard() {
 
 // whoWon()
 function whoWon() {
-    if (playerSum > dealerSum) {
+    if (playerSum < dealerSum) {
         playerIsAlive = true
         dealerIsAlive = false
         if (playerIsAlive === true && dealerIsAlive === false) {
             message = "You won! 🎉🎉🎉"
         }
-    } else if (playerSum < dealerSum) {
+    } else if (playerSum > dealerSum) {
         playerIsAlive = true
         dealerIsAlive = false
         if (playerIsAlive === true && dealerIsAlive === false) {
@@ -226,6 +227,7 @@ function finish() {
     newCardBtn.style.backgroundColor = "#A9A9A9"
     newCardBtn.disabled = true
 }
+
 
 
 
